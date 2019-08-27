@@ -6,7 +6,7 @@
       <class name="com.apidemos.qa.testcases.TestCaseLaunchApp">
         <methods>
           <include name="launch"/>
-          <include name="helloWorld"/>
+          <include name="clickPreference"/>
         </methods>
       </class> <!-- com.apidemos.qa.testcases.TestCaseLaunchApp -->
     </classes>

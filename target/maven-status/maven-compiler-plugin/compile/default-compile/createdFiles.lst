@@ -1,2 +1,4 @@
 com\apidemos\qa\base\TestBase.class
 com\zoopla\qa\MobileAutomation_Learn\App.class
+com\apidemos\qa\pages\HomePage.class
+com\apidemos\qa\pages\PreferencePage.class

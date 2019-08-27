@@ -1,21 +1,28 @@
 package com.apidemos.qa.base;
 
 import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
+
+import com.apidemos.qa.util.TestUtil;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.MobileCapabilityType;
+import io.appium.java_client.service.local.AppiumDriverLocalService;
 
 public class TestBase {
 
-	static AndroidDriver<AndroidElement> driver;
+	static AppiumDriverLocalService service;
 	
-	public static void initCapabilities() {
+	public static AndroidDriver<AndroidElement> driver;
+	
+	public static AndroidDriver<AndroidElement> initCapabilities() {
 		
 		try {
 			/*
@@ -32,12 +39,37 @@ public class TestBase {
 			
 		driver = new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub"),cap);
 			
+		
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			
 		} catch (MalformedURLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		return driver;
 		
 	}
 
+	
+	public static void startAppiumServer() {
+		service = AppiumDriverLocalService.buildDefaultService();
+		service.start();
+	}
+	
+	
+	public static void stopAppiumServer() {
+		service = AppiumDriverLocalService.buildDefaultService();
+		service.stop();
+	}
+	
+	public static void startEmulator() {
+		try {
+			Runtime.getRuntime().exec(System.getProperty("user.dir") + "/src/main/java/com.apidemos.qa.resources/startEmulator.bat");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	
 }

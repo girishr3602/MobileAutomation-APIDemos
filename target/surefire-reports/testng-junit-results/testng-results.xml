@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Command line suite" duration-ms="4" started-at="2019-05-16T16:42:11Z" finished-at="2019-05-16T16:42:11Z">
+  <suite name="Command line suite" duration-ms="8" started-at="2019-05-16T17:43:25Z" finished-at="2019-05-16T17:43:25Z">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="4" started-at="2019-05-16T16:42:11Z" finished-at="2019-05-16T16:42:11Z">
+    <test name="Command line test" duration-ms="8" started-at="2019-05-16T17:43:25Z" finished-at="2019-05-16T17:43:25Z">
       <class name="com.zoopla.qa.MobileAutomation_Learn.AppTest">
-        <test-method status="PASS" signature="testApp()[pri:0, instance:testApp(com.zoopla.qa.MobileAutomation_Learn.AppTest)]" name="testApp" duration-ms="0" started-at="2019-05-16T16:42:11Z" finished-at="2019-05-16T16:42:11Z">
+        <test-method status="PASS" signature="testApp()[pri:0, instance:testApp(com.zoopla.qa.MobileAutomation_Learn.AppTest)]" name="testApp" duration-ms="0" started-at="2019-05-16T17:43:25Z" finished-at="2019-05-16T17:43:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testApp -->
